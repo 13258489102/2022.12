@@ -1,0 +1,53 @@
+ 20:36:58
+#include<stdio.h>
+void fun(int(*pa)[3])
+{
+	printf("%d",pa[0][2]);
+	
+}
+int main()
+{
+	int arr[2][3]={{23,43,57},{21,58,31}};
+	int(*pa)[3];
+	int i;
+//	pa=arr;
+	for(i=0;i<2;i++)
+	pa[i]=arr[i];
+fun(pa);
+	return 0;
+}
+//#include<stdio.h>
+//void fun(int*pa[3])
+//{
+//	printf("%d",pa[0][2]);
+//	
+//}
+//int main()
+//{
+//	int arr[2][3]={{23,43,57},{21,58,31}};
+//	int *pa[3];
+//	int i;
+////	pa=arr;
+//	for(i=0;i<3;i++)
+//	pa[i]=arr[i];
+//fun(pa);
+//	return 0;
+//}
+
+ 20:37:06
+#include<stdio.h>
+void fun(int(*pa)[3])
+{
+	printf("%d",pa[0][2]);
+	
+}
+int main()
+{
+	int arr[2][3]={{23,43,57},{21,58,31}};
+	int(*pa)[3];
+	int i;
+pa=arr;//或者	pa=&arr[0];
+fun(pa);
+	return 0;
+}
+
