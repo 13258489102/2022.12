@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdio.h>
+//#include<string.h>
+int main()
+{
+	char a[20]="tianxia!";
+	FILE *pa;
+	pa=fopen("D:\\Users\\table.txt","w");
+	fputs(a,pa);
+	fputc('\n',pa);
+	fwrite((&a),sizeof(a),1,pa);
+	fprintf(pa,"%s",a);
+	fclose(pa);
+	return 0;
+}
+#include<stdio.h>
+#include<string.h>
+typedef struct Stu
+{
+	int num;
+	char name[20];
+	int chinice;
+	int mathice;
+}STU;
+int main()
+{
+	STU stu1;
+	stu1.num=893879320;
+	strcpy(stu1.name,"赵子龙");
+	stu1.chinice=87;
+	stu1.mathice=145;
+	int n;
+	printf("请选择：=>");
+	printf("1、添加记录");
+	printf("2、显示记录");
+	printf("3、修改记录");
+	printf("4、删除记录	");
+	printf("5、查找记录");
+	printf("6、排序"    );
+	printf("7、退出系统");
+	scanf("%d",n);
+if(n==1)
+ {
+	printf("%d%s%d%d",stu1.num,stu1.name,stu1.chinice,stu1.mathice);
+ } 
+
+	return 0;
+}
