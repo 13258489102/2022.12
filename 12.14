@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+	double n;
+	printf("请输入款值：");
+	scanf("%lf",&n);
+	if(n<100)
+	printf("应付：%d",n);
+	else if(n>=100&&n<200)
+	{
+	n=n*0.97;
+	printf("%5.3lf",n);
+	}
+	else if(n>200&&n<=500)
+	{
+			n=n*0.95;
+	printf("%5.3lf",n);
+	}	
+	else if(n>500&&n<900)
+	{
+			n=n*0.9;
+	printf("%5.3lf",n);
+	}
+	else
+	{
+			n=n*0.8;
+	printf("%5.3lf",n);
+	}
+	return 0;
+}
